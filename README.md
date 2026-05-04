@@ -37,8 +37,7 @@ Das Projekt verzichtet auf eine externe Datenbank und implementiert stattdessen 
 - **ToasterMemory**: Hält eine statische HashMap<Integer, Toaster>. Dies ermöglichtschnellen Zugriff auf Instanzen über die eindeutige ID.  
 
 ## 5. Implementierungsdetails der Komponenten
-  
-|-|-| 
+| | |  
 | **Klasse** | **Kernfunktion** |   
 | Toaster | Basis-Logik, Thread-Management für den Timer, Zustandssteuerung. |   
 | SuperToaster | Erweiterung um thermische Variablen (aktuelleTemperatur), Grenzwerterkennung und automatische Recovery-Logik. |   
