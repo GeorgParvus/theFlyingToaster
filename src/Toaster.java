@@ -18,9 +18,8 @@ public class Toaster {
     
     // Thread-Management für nicht-blockierende Ausführung
     protected Thread toastThread;           // Hintergrund-Thread für den Toastvorgang
-    protected boolean istToasting = false;  // Flag, ob der Toaster gerade aktiv ist
-
-
+    volatile boolean istToasting = false;  // Flag, ob der Toaster gerade aktiv ist.
+                                           // volatile stellt sicher, dass alle Threads den akutellen Zustand der Variable kennen.
     /**
      * Standardkonstruktor.
      */

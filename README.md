@@ -39,10 +39,10 @@ Das Projekt verzichtet auf eine externe Datenbank und implementiert stattdessen 
 ## 5. Implementierungsdetails der Komponenten
 | | |  
 |-|-| 
-| **Klasse** | **Kernfunktion** |   
-| Toaster | Basis-Logik, Thread-Management für den Timer, Zustandssteuerung. |   
-| SuperToaster | Erweiterung um thermische Variablen (aktuelleTemperatur), Grenzwerterkennung und automatische Recovery-Logik. |   
-| Main | CLI-Frontend, Event-Loop und Dispatching von Benutzerbefehlen. |   
+| **Klasse** | **Kernfunktion** | **Wichtigste Zustandsänderung** |  
+| Toaster | Basis-Logik, Thread-Management für den Timer, Zustandssteuerung. | AUSGEWORFEN -> EINGEFUEHRT  | 
+| SuperToaster | Erweiterung um thermische Variablen (aktuelleTemperatur), Grenzwerterkennung und automatische Recovery-Logik. | ueberhitzt = true blockiert toasten() | 
+| Main | CLI-Frontend, Event-Loop und Dispatching von Benutzerbefehlen. |   |
 
 
 
@@ -60,5 +60,19 @@ Das Projekt verzichtet auf eine externe Datenbank und implementiert stattdessen 
 	```
        java -cp out Main
 	```
-   
+## 7. Klassen- und Objektdiagramm
+
+![Diagramm konnte nicht gefunden werdeb](./ToasterClassObjDia.drawio.png)
+
+## 8. Bekannte Herausforderungen & Limitierungen
+
+**Console Scrambling (Asynchrone Interruption)**
+
+Da der Toastvorgang und die Abkühlphase in Hintergrund-Threads laufen, kommunizieren diese autonom über System.out.println() mit dem Benutzer. Dies führt in einer Konsolenanwendung zu folgenden Problemen:
+
+    Überlagerung: Während der Benutzer im Hauptmenü eine Eingabe tätigt (z. B. eine ID eintippt), kann ein Thread eine Statusmeldung (z. B. „[Status] leicht getoastet“) ausgeben. Dies zerreißt die visuelle Menüstruktur.
+
+    Input-Verschlucken: Die Statusmeldungen können den Prompt für die Benutzereingabe nach oben verschieben, sodass der Cursor scheinbar „im Leeren“ steht, obwohl der Scanner weiterhin auf Input wartet.
+
+
    
