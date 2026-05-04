@@ -64,13 +64,13 @@ Gerätemenü: Erscheint, sobald ein spezifischer Toaster ausgewählt wurde. Hier
 	git clone https://github.com/GeorgParvus/theFlyingToaster.git
 
    2. Kompilieren:
-	```
-       javac src/*.java -d out/
-	```       
+
+	javac src/*.java -d out/
+      
    3. Ausführen:
-	```
-       java -cp out Main
-	```
+
+	java -cp out Main
+
 ## 8. Klassen- und Objektdiagramm
 
 ![Diagramm konnte nicht gefunden werden.](./Diagramm.drawio.png)
