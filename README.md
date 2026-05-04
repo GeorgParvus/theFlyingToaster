@@ -62,7 +62,7 @@ Das Projekt verzichtet auf eine externe Datenbank und implementiert stattdessen 
 	```
 ## 7. Klassen- und Objektdiagramm
 
-![Diagramm konnte nicht gefunden werden.](./CalassObjDiagramm.drawio.png)
+![Diagramm konnte nicht gefunden werden.](./Diagramm.drawio.png)
 
 ## 8. Bekannte Herausforderungen & Limitierungen
 
