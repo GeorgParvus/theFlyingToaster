@@ -70,9 +70,9 @@ Das Projekt verzichtet auf eine externe Datenbank und implementiert stattdessen 
 
 Da der Toastvorgang und die Abkühlphase in Hintergrund-Threads laufen, kommunizieren diese autonom über System.out.println() mit dem Benutzer. Dies führt in einer Konsolenanwendung zu folgenden Problemen:
 
-    Überlagerung: Während der Benutzer im Hauptmenü eine Eingabe tätigt (z. B. eine ID eintippt), kann ein Thread eine Statusmeldung (z. B. „[Status] leicht getoastet“) ausgeben. Dies zerreißt die visuelle Menüstruktur.
+Überlagerung: Während der Benutzer im Hauptmenü eine Eingabe tätigt (z. B. eine ID eintippt), kann ein Thread eine Statusmeldung (z. B. „[Status] leicht getoastet“) ausgeben. Dies zerreißt die visuelle Menüstruktur.
 
-    Input-Verschlucken: Die Statusmeldungen können den Prompt für die Benutzereingabe nach oben verschieben, sodass der Cursor scheinbar „im Leeren“ steht, obwohl der Scanner weiterhin auf Input wartet.
+Input-Verschlucken: Die Statusmeldungen können den Prompt für die Benutzereingabe nach oben verschieben, sodass der Cursor scheinbar „im Leeren“ steht, obwohl der Scanner weiterhin auf Input wartet.
 
 
    
