@@ -1,4 +1,4 @@
-# theFlyingToaster - Dokumentation
+# TheFlyingToaster - Dokumentation
 
 Eine Java-basierte Toaster-Simulation zur Demonstration von asynchroner Prozesssteuerung und objektorientierter Programmierung.
 
@@ -8,7 +8,7 @@ Das Projekt ist als zustandsgesteuerte Konsolenanwendung implementiert. Es nutzt
 
 ### Klassenhierarchie und OOP-Prinzipien
  
-- **Vererbung:**SuperToaster erweitert Toaster um eine thermische Logik.  
+- **Vererbung:** SuperToaster erweitert Toaster um eine thermische Logik.  
 - **Polymorphie:** Die Steuerung in Main agiert primär auf Referenzen des Typs Toaster, was den transparenten Einsatz beider Modellvarianten ermöglicht.  
 - **Kapselung:** Zustandsübergänge werden über dedizierte Methoden (toastEinfuehren, toastAuswerfen) gesteuert.  
 
