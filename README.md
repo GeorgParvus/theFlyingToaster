@@ -44,9 +44,19 @@ Das Projekt verzichtet auf eine externe Datenbank und implementiert stattdessen 
 | SuperToaster | Erweiterung um thermische Variablen (aktuelleTemperatur), Grenzwerterkennung und automatische Recovery-Logik. | ueberhitzt = true blockiert toasten() | 
 | Main | CLI-Frontend, Event-Loop und Dispatching von Benutzerbefehlen. |   |
 
+## 6. Benutzerschnittstelle (CLI)
 
+Das Programm wird über ein Command Line Interface (CLI) gesteuert. Dabei handelt es sich um eine textbasierte Schnittstelle, bei der die Interaktion durch die Eingabe von Ziffern in der Konsole in einer endlosen Schleife erfolgt. Die Interaktion ist hierarchisch in ein Hauptmenü und ein gerätespezifisches Untermenü gegliedert.
 
-## 6. Installation & Ausführung
+**Menüstruktur**
+
+Die Navigation erfolgt durch die Eingabe von Ziffern, gefolgt von der Bestätigung durch die Enter-Taste.
+
+    Hauptmenü: Ermöglicht die globale Verwaltung (Erstellen, Listen, Auswählen).
+
+    Gerätemenü: Erscheint, sobald ein spezifischer Toaster ausgewählt wurde. Hier werden Instanz-Methoden (toasten(), setZeit()) direkt auf das ausgewählte Objekt angewendet.
+
+## 7. Installation & Ausführung
 
    1. Repository klonen:
 	```
@@ -60,11 +70,11 @@ Das Projekt verzichtet auf eine externe Datenbank und implementiert stattdessen 
 	```
        java -cp out Main
 	```
-## 7. Klassen- und Objektdiagramm
+## 8. Klassen- und Objektdiagramm
 
 ![Diagramm konnte nicht gefunden werden.](./Diagramm.drawio.png)
 
-## 8. Bekannte Herausforderungen & Limitierungen
+## 9. Bekannte Herausforderungen & Limitierungen
 
 **Console Scrambling (Asynchrone Interruption)**
 
