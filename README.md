@@ -1,4 +1,4 @@
-**theFlyingToaster - Systemdokumentation**  
+# **theFlyingToaster - Systemdokumentation**  
 Eine Java-basierte Simulation zur Demonstration von asynchroner Prozesssteuerung und objektorientierten Entwurfsmustern.  
 **1. Systemarchitektur**  
 Das Projekt ist als zustandsgesteuerte Konsolenanwendung implementiert. Es nutzt eine asynchrone Architektur, um physische Hardware-Vorgänge (Heizvorgänge, Abkühlphasen) zu simulieren, ohne den Haupt-Thread der Benutzerinteraktion zu blockieren.  
