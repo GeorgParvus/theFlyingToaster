@@ -12,7 +12,7 @@ Das Projekt ist als zustandsgesteuerte Konsolenanwendung implementiert. Es nutzt
 - **Polymorphie:** Die Steuerung in Main agiert primär auf Referenzen des Typs Toaster, was den transparenten Einsatz beider Modellvarianten ermöglicht.  
 - **Kapselung:** Zustandsübergänge werden über dedizierte Methoden (toastEinfuehren, toastAuswerfen) gesteuert.  
 
-##2 . Nebenläufigkeits-Modell
+## 2 . Nebenläufigkeits-Modell
 
 Das System nutzt Multithreading zur Simulation von Zeitabläufen:  
 
@@ -20,7 +20,7 @@ Das System nutzt Multithreading zur Simulation von Zeitabläufen:
 
 - **Hintergrund-Prozesse:** Der SuperToaster initiiert bei Überhitzung einen autonomen Abkühl-Thread, der den Instanz-Zustand (ueberhitzt) überwacht und bei Unterschreitung eines Schwellenwerts reaktiviert.  
 
-## 3. Zustandsverwaltung**  
+## 3. Zustandsverwaltung
 
 Die Zustände werden über typsichere Enumerationen abgebildet:  
 
@@ -49,14 +49,16 @@ Das Projekt verzichtet auf eine externe Datenbank und implementiert stattdessen 
 ## 6. Installation & Ausführung
 
    1. Repository klonen:
-
-   1    git clone https://github.com/dein-username/theFlyingToaster.git
+	```
+      git clone https://github.com/dein-username/theFlyingToaster.git
+	```
    2. Kompilieren:
-
-   1    javac src/*.java -d out/
+	```
+       javac src/*.java -d out/
+	```       
    3. Ausführen:
-
-   1    java -cp out Main
-
+	```
+       java -cp out Main
+	```
    
    
