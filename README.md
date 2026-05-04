@@ -42,7 +42,7 @@ Das Projekt verzichtet auf eine externe Datenbank und implementiert stattdessen 
 | **Klasse** | **Kernfunktion** | **Wichtigste Zustandsänderung** |  
 | Toaster | Basis-Logik, Thread-Management für den Timer, Zustandssteuerung. | AUSGEWORFEN -> EINGEFUEHRT  | 
 | SuperToaster | Erweiterung um thermische Variablen (aktuelleTemperatur), Grenzwerterkennung und automatische Recovery-Logik. | ueberhitzt = true blockiert toasten() | 
-| Main | CLI-Frontend, Event-Loop und Dispatching von Benutzerbefehlen. |   |
+| Main | CLI-Frontend, Event-Loop und Steuerung von Benutzerbefehlen. |   |
 
 ## 6. Benutzerschnittstelle (CLI)
 
