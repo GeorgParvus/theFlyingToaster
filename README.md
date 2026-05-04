@@ -6,20 +6,21 @@ Eine Java-basierte Toaster-Simulation zur Demonstration von asynchroner Prozesss
 
 Das Projekt ist als zustandsgesteuerte Konsolenanwendung implementiert. Es nutzt eine asynchrone Architektur, um physische Hardware-Vorgänge (Heizvorgänge, Abkühlphasen) zu simulieren, ohne den Haupt-Thread der Benutzerinteraktion zu blockieren.  
 
-###Klassenhierarchie und OOP-Prinzipien
+### Klassenhierarchie und OOP-Prinzipien
  
 - **Vererbung:**SuperToaster erweitert Toaster um eine thermische Logik.  
 - **Polymorphie:** Die Steuerung in Main agiert primär auf Referenzen des Typs Toaster, was den transparenten Einsatz beider Modellvarianten ermöglicht.  
 - **Kapselung:** Zustandsübergänge werden über dedizierte Methoden (toastEinfuehren, toastAuswerfen) gesteuert.  
 
-##2. Nebenläufigkeits-Modell
+##2 . Nebenläufigkeits-Modell
 
 Das System nutzt Multithreading zur Simulation von Zeitabläufen:  
 
 - **Toast-Zyklus:** Ein dedizierter Thread verarbeitet den Fortschrittsbalken der Bräunung. Die Abbruchlogik ist über thread.interrupt() realisiert, um eine saubere Ressourcenfreigabe beim manuellen Auswurf zu gewährleisten.  
 
 - **Hintergrund-Prozesse:** Der SuperToaster initiiert bei Überhitzung einen autonomen Abkühl-Thread, der den Instanz-Zustand (ueberhitzt) überwacht und bei Unterschreitung eines Schwellenwerts reaktiviert.  
-**3. Zustandsverwaltung**  
+
+## 3. Zustandsverwaltung**  
 
 Die Zustände werden über typsichere Enumerationen abgebildet:  
 
@@ -29,13 +30,13 @@ Die Zustände werden über typsichere Enumerationen abgebildet:
 
 Der Bräunungsgrad erhöht sich im Toaster-Thread inkrementell alle 15 Simulationssekunden, basierend auf der Ordinalzahl der Enum-Werte.  
 
-##4. Datenhaltung
+## 4. Datenhaltung
 
 Das Projekt verzichtet auf eine externe Datenbank und implementiert stattdessen einen in Memoryspeicher:  
 
 - **ToasterMemory**: Hält eine statische HashMap<Integer, Toaster>. Dies ermöglichtschnellen Zugriff auf Instanzen über die eindeutige ID.  
 
-##5. Implementierungsdetails der Komponenten*
+## 5. Implementierungsdetails der Komponenten*
 | | |  
 |-|-|  
 | **Klasse** | **Kernfunktion** |   
@@ -45,7 +46,7 @@ Das Projekt verzichtet auf eine externe Datenbank und implementiert stattdessen 
 
 
 
-##6. Installation & Ausführung
+## 6. Installation & Ausführung
 
    1. Repository klonen:
 
@@ -58,11 +59,4 @@ Das Projekt verzichtet auf eine externe Datenbank und implementiert stattdessen 
    1    java -cp out Main
 
    
-**6. Kompilierung und Ausführung**  
-**Voraussetzung:** JDK 8 oder höher.  
-# Kompilieren  
- javac src/*.java -d out/  
-   
- # Ausführen  
- java -cp out Main  
    
