@@ -52,16 +52,17 @@ Das Programm wird über ein Command Line Interface (CLI) gesteuert. Dabei handel
 
 Die Navigation erfolgt durch die Eingabe von Ziffern, gefolgt von der Bestätigung durch die Enter-Taste.
 
-    Hauptmenü: Ermöglicht die globale Verwaltung (Erstellen, Listen, Auswählen).
+Hauptmenü: Ermöglicht die globale Verwaltung (Erstellen, Listen, Auswählen).
 
-    Gerätemenü: Erscheint, sobald ein spezifischer Toaster ausgewählt wurde. Hier werden Instanz-Methoden (toasten(), setZeit()) direkt auf das ausgewählte Objekt angewendet.
+Gerätemenü: Erscheint, sobald ein spezifischer Toaster ausgewählt wurde. Hier werden Instanz-Methoden (toasten(), setZeit()) direkt auf das ausgewählte Objekt angewendet.
 
 ## 7. Installation & Ausführung
 
    1. Repository klonen:
-	```
-      git clone https://github.com/GeorgParvus/theFlyingToaster.git
-	```
+   
+
+	git clone https://github.com/GeorgParvus/theFlyingToaster.git
+
    2. Kompilieren:
 	```
        javac src/*.java -d out/
