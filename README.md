@@ -16,7 +16,7 @@ Das Projekt ist als zustandsgesteuerte Konsolenanwendung implementiert. Es nutzt
 
 Das System nutzt Multithreading zur Simulation von Zeitabläufen:  
 
-- **Toast-Zyklus:** Ein dedizierter Thread verarbeitet den Fortschrittsbalken der Bräunung. Die Abbruchlogik ist über thread.interrupt() realisiert, um eine saubere Ressourcenfreigabe beim manuellen Auswurf zu gewährleisten.  
+- **Toast-Zyklus:** Ein dedizierter Thread verarbeitet den Zustand des Toasts (Bräunungsgrad). Die Abbruchlogik ist über thread.interrupt() realisiert, um eine saubere Ressourcenfreigabe beim manuellen Auswurf zu gewährleisten.  
 
 - **Hintergrund-Prozesse:** Der SuperToaster initiiert bei Überhitzung einen autonomen Abkühl-Thread, der den Instanz-Zustand (ueberhitzt) überwacht und bei Unterschreitung eines Schwellenwerts reaktiviert.  
 
@@ -34,7 +34,7 @@ Der Bräunungsgrad erhöht sich im Toaster-Thread inkrementell alle 15 Simulatio
 
 Das Projekt verzichtet auf eine externe Datenbank und implementiert stattdessen einen in Memoryspeicher:  
 
-- **ToasterMemory**: Hält eine statische HashMap<Integer, Toaster>. Dies ermöglichtschnellen Zugriff auf Instanzen über die eindeutige ID.  
+- **ToasterMemory**: Hält eine statische HashMap<Integer, Toaster>. Dies ermöglicht schnellen Zugriff auf Instanzen über die eindeutige ID.  
 
 ## 5. Implementierungsdetails der Komponenten
 | | |  
@@ -60,7 +60,7 @@ Die Navigation erfolgt durch die Eingabe von Ziffern, gefolgt von der Bestätigu
 
    1. Repository klonen:
 	```
-      git clone https://github.com/dein-username/theFlyingToaster.git
+      git clone https://github.com/GeorgParvus/theFlyingToaster.git
 	```
    2. Kompilieren:
 	```
